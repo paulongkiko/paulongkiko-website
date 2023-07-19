@@ -21,7 +21,7 @@ export default function Home() {
             </ul>
           </nav>
           <div>
-            <img src="/eboardShoot2023-3.jpg" alt="Paul Ongkiko" className="mx-auto rounded-full w-60 h-60"></img>
+            <img src="./eboardShoot2023-3.jpg" alt="Paul Ongkiko" className="mx-auto rounded-full w-60 h-60"></img>
           </div>
           <div className="text-center p-10">
             <h2 className="text-4xl py-2 font-gotham">About Me</h2>
@@ -56,16 +56,16 @@ export default function Home() {
             <h2 className="text-4xl py-2 font-gotham">Photography Portfolio</h2>
           </div>
           <div className="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5">
-            <img src="/christianGraduation-10.jpg" alt=""/>
-            <img src="/IMG_3573.jpg" alt=""/>
-            <img src="/IMG_5026.jpg" alt=""/>
-            <img src="/IMG_6466.jpg" alt=""/>
-            <img src="/IMG_6521.jpg" alt=""/>
-            <img src="/IMG_6784.jpg" alt=""/>
-            <img src="/Ongkiko_FP_4.jpg" alt=""/>
-            <img src="/Ongkiko_P3_4.jpg" alt=""/>
-            <img src="/Ongkiko_FP_5.jpg" alt=""/>
-            <img src="/washuSoloshoot-1.jpg" alt=""/>
+            <img src="./christianGraduation-10.jpg" alt=""/>
+            <img src="./IMG_3573.jpg" alt=""/>
+            <img src="./IMG_5026.jpg" alt=""/>
+            <img src="./IMG_6466.jpg" alt=""/>
+            <img src="./IMG_6521.jpg" alt=""/>
+            <img src="./IMG_6784.jpg" alt=""/>
+            <img src="./Ongkiko_FP_4.jpg" alt=""/>
+            <img src="./Ongkiko_P3_4.jpg" alt=""/>
+            <img src="./Ongkiko_FP_5.jpg" alt=""/>
+            <img src="./washuSoloshoot-1.jpg" alt=""/>
           </div>
           <div className="text-center pt-5 pb-10">
             <h3 className="text-3xl font-gotham pb-2">Gear and Software</h3>

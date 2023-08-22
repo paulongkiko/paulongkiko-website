@@ -40,6 +40,10 @@ export default function Home() {
           <div className="text-center p-10">
             <h2 className="text-4xl py-2 font-gotham">SWE Portfolio</h2>
             <div className="lg:flex gap-10">
+            <div className="p-10 shadow-lg rounded-xl my-10 flex flex-col items-center min-w-min">
+                <h3 className="text-2xl py-2">Spotify Search Engine</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada fames ac. Viverra ipsum nunc aliquet bibendum. Ornare arcu odio ut sem nulla pharetra diam. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Et egestas quis ipsum suspendisse. Pellentesque elit eget gravida cum sociis natoque. Eget mi proin sed libero enim sed faucibus turpis. Neque vitae tempus quam pellentesque nec nam aliquam sem et. Ipsum consequat nisl vel pretium lectus quam. Non nisi est sit amet facilisis magna etiam tempor. Placerat in egestas erat imperdiet sed euismod nisi. Consequat id porta nibh venenatis cras. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Massa id neque aliquam vestibulum. Iaculis nunc sed augue lacus viverra vitae congue eu. Egestas sed sed risus pretium quam vulputate dignissim. Lacus vestibulum sed arcu non.</p>
+              </div>
               <div className="p-10 shadow-lg rounded-xl my-10 flex flex-col items-center min-w-min">
                 <h3 className="text-2xl pb-2">Personal Website</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam ultrices sagittis orci a. Nibh praesent tristique magna sit amet. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Ac orci phasellus egestas tellus rutrum. Habitasse platea dictumst vestibulum rhoncus est. Est ante in nibh mauris cursus mattis molestie a iaculis. Quam adipiscing vitae proin sagittis. Donec adipiscing tristique risus nec feugiat. Mollis nunc sed id semper risus in hendrerit.</p>

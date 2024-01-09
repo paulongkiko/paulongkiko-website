@@ -1,98 +1,115 @@
+'use client'
 import Head from "next/head";
-import {BsFillMoonStarsFill} from 'react-icons/bs';
-import {AiFillLinkedin, AiFillInstagram, AiFillGithub} from "react-icons/ai";
+import React, { useState } from 'react';
+import { IonIcon } from '@ionic/react';
+import { menu, logoInstagram, logoGithub, logoLinkedin } from 'ionicons/icons'
+
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  const menuTop = isMenuOpen ? '9%' : '-100%';
+
   return (
     <div>
       <Head>
         <title>Paul Ongkiko</title>
       </Head>
 
-      <main className="bg-white px-10">
-        
-        <section className="min-h-screen">
-          <nav className=" py-10 mb-10 flex justify-between">
-            <h1 className="text-2xl font-gotham">PAUL ONGKIKO</h1>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill className="cursor-pointer text-2xl"/>
-              </li>
-            </ul>
+      <main className="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
+        <header className="bg-white py-3">
+          <nav className="flex justify-between items-center w-[92%] mx-auto">
+            <h1 className="text-2xl font-gotham cursor-pointer hover:text-[#a1bcea] duration-200">PAUL ONGKIKO</h1>
+            <div className={`md:static absolute md:min-h-fit bg-white min-h-[60vh] left-0 top-[${menuTop}] md:w-auto w-full flex items-center px-5`}>
+              <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                <li>
+                  <a className="hover:text-[#a1bcea] duration-200  " href="#">About Me</a>
+                </li>
+                <li>
+                  <a className="hover:text-[#a1bcea] duration-200 " href="#">Skills</a>
+                </li>
+                <li>
+                  <a className="hover:text-[#a1bcea] duration-200 " href="#">Projects</a>
+                </li>
+                <li>
+                  <a className="hover:text-[#a1bcea] duration-200 " href="#">Photography</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex items-center gap-6">
+              <button className="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec] duration-200" >Resume</button>
+              <IonIcon onClick={toggleMenu} icon={menu} className="text-3xl cursor-pointer md:hidden"/>
+            </div>
           </nav>
-          <div>
-            <img src="./eboardShoot2023-3.jpg" alt="Paul Ongkiko" className="mx-auto rounded-full w-60 h-60"></img>
-          </div>
-          <div className="text-center p-10">
-            <h2 className="text-4xl py-2 font-gotham">About Me</h2>
-            <h3 className="text-2xl py-2">Software Engineer and Photographer.</h3>
-            <p className="text-md py-3 leading-8 mx-auto max-w-md">
-              Undergraduate pursuing a BA in Computer Science at <span className="text-blue-700 font-bold">Saint Louis University</span>. Expected Graduation 2025.
-            </p>
-          </div>
-          <div className="text-4xl py-2 flex justify-center gap-10">
-            <a href="https://www.linkedin.com/in/paul-ongkiko-b340b4237/"><AiFillLinkedin /></a>
-            <a href="https://github.com/paulongkiko"><AiFillGithub /></a>
-            <a href="https://www.instagram.com/paulsviewfinder/"><AiFillInstagram /></a>
-          </div>
+        </header>
+        
+        <section className="py-3 m-20 flex flex-col md:flex-row md:items-center">
+          <img src="./xvcki-7.jpg" alt="Paul Ongkiko" className="w-auto h-96 md:order-2 md:ml-auto rounded-full"/>
+            <div className="text-white md:ml-4 md:mb-auto">
+              <h1 className="font-gotham text-6xl">Hello, I'm Paul Ongkiko</h1>
+              <h1 className="font-gotham text-4xl">Developer and Photographer</h1>
+              <p className="font-gotham text-lg"></p>
+              <p className="font-gotham text-lg">I love chasing the aesthetic, whether through taking pictures, building outfits, or design.</p>
+                <div className="flex flex-col gap-4 md:flex-row">
+                  <a href="https://www.linkedin.com/in/paul-ongkiko-b340b4237/" target="_blank" rel="noopener noreferrer">
+                    <IonIcon icon={logoLinkedin} className="cursor-pointer text-5xl hover:text-black duration-200" />
+                  </a>
+                  <a href="https://github.com/paulongkiko" target="_blank" rel="noopener noreferrer">
+                    <IonIcon icon={logoGithub} className="cursor-pointer text-5xl hover:text-black duration-200" />
+                  </a>
+                  <a href="https://www.instagram.com/paulsviewfinder/" target="_blank" rel="noopener noreferrer">
+                    <IonIcon icon={logoInstagram} className="cursor-pointer text-5xl hover:text-black duration-200" />
+                  </a>
+                </div>
+            </div>
         </section>
-        <section>
-          <div className="text-center p-10">
-            <h2 className="text-4xl py-2 font-gotham">SWE Portfolio</h2>
-            <div className="lg:flex gap-10">
-            <div className="p-10 shadow-lg rounded-xl my-10 flex flex-col items-center min-w-min">
-                <h3 className="text-2xl py-2">Spotify Search Engine</h3>
-                <h2>Javascript, React</h2>
-                <a>Github</a>
-                <a>Live</a>
-              </div>
-              <div className="p-10 shadow-lg rounded-xl my-10 flex flex-col items-center min-w-min">
-                <h3 className="text-2xl pb-2">Personal Website</h3>
-                <h2>Java</h2>
-                <a>Github</a>
-              </div>
-              <div className="p-10 shadow-lg rounded-xl my-10 flex flex-col items-center min-w-min">
-                <h3 className="text-2xl py-2">Memory Card Game</h3>
-                <a>Github</a>
-                <h2>Javascript, React</h2>
-              </div>
+
+        <section className="bg-gradient-to-t from-[#a6c1ee] to-[#fbc2eb]">
+          <div className="bg-white py-3 mx-10 rounded-3xl">
+            <div className="px-10 py-4">
+              <h2 className=" font-gotham text-3xl">Skills</h2>
             </div>
           </div>
         </section>
-        <section>
-          <div className="text-center p-10">
-            <h2 className="text-4xl py-2 font-gotham">Photography Portfolio</h2>
-          </div>
-          <div className="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5">
-            <img src="./christianGraduation-10.jpg" alt=""/>
-            <img src="./IMG_3573.jpg" alt=""/>
-            <img src="./IMG_5026.jpg" alt=""/>
-            <img src="./IMG_6466.jpg" alt=""/>
-            <img src="./IMG_6521.jpg" alt=""/>
-            <img src="./IMG_6784.jpg" alt=""/>
-            <img src="./Ongkiko_FP_4.jpg" alt=""/>
-            <img src="./Ongkiko_P3_4.jpg" alt=""/>
-            <img src="./Ongkiko_FP_5.jpg" alt=""/>
-            <img src="./washuSoloshoot-1.jpg" alt=""/>
-          </div>
-          <div className="text-center pt-5 pb-10">
-            <h3 className="text-3xl font-gotham pb-2">Gear and Software</h3>
-            <h3 className="text-2xl pb-2">Cameras</h3>
-            <ul className="pb-5">
-              <li>Canon t7i - 50mm Prime f/1.8, 18-55mm f/3.5 - 5.6</li>
-              <li>Canon Sure Shot Telemax</li>
-              <li>Samsung Galaxy Z-Flip 4</li>
-            </ul>
-            <h3 className="text-2xl pb-2">Software</h3>
-            <ul>
-              <li>Lightroom</li>
-              <li>Photoshop</li>
-              <li>Bridge</li>
-              <li>Premiere Pro</li>
-              <li>CapCut</li>
-            </ul>
+        
+        <section className="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]">
+          <div className="bg-white py-3 mx-10 rounded-3xl">
+            <div className="px-10 py-4">
+              <h2 className="font-gotham text-3xl">Projects</h2>
+            </div>
           </div>
         </section>
+
+        <section className="bg-gradient-to-t from-[#a6c1ee] to-[#fbc2eb]">
+          <div className="bg-white py-3 mx-10 rounded-3xl">
+            <div className="px-10 py-4">
+              <h2 className="font-gotham text-3xl mb-5">Photography</h2>
+              <div className="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-4 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
+                <img src="./xvcki-26.jpg" alt=""/>
+                <img src="./whiteCoat-43.jpg" alt=""/>
+                <img src="./Ongkiko_FP_4.jpg" alt=""/>
+                <img src="./Ongkiko_P3_2.jpg" alt=""/>
+                <img src="./washuSoloshoot-1.jpg" alt=""/>
+                <img src="./IMG_3573.jpg" alt=""/>
+                <img src="./IMG_5026.jpg" alt=""/>
+                <img src="./Ongkiko_P3_4.jpg" alt=""/>
+                <img src="./IMG_6466.jpg" alt=""/>
+                <img src="./IMG_6521.jpg" alt=""/>
+                <img src="./IMG_5105.jpg" alt=""/>
+                <img src="./Ongkiko.A5.4.jpg" alt=""/>
+                <img src="./IMG_6784.jpg" alt=""/>
+                <img src="./Ongkiko_FP_5.jpg" alt=""/>
+                <img src="./ChristianGraduation-10.jpg" alt=""/>
+              </div>
+            </div>
+          </div>
+          <h5 className="font-gotham flex items-center justify-center text-white">Designed by Paul Ongkiko</h5>
+        </section>
+        
       </main>
     </div>
   )

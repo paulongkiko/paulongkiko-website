@@ -50,7 +50,7 @@ export default function Home() {
         <section className="py-3 m-20 flex flex-col md:flex-row md:items-center">
           <img src="./xvcki-7.jpg" alt="Paul Ongkiko" className="w-auto h-96 md:order-2 md:ml-auto rounded-full"/>
             <div className="text-white md:ml-4 md:mb-auto">
-              <h1 className="font-gotham text-6xl">Hello, I'm Paul Ongkiko</h1>
+              <h1 className="font-gotham text-6xl">Hello, I&apos;m Paul Ongkiko</h1>
               <h1 className="font-gotham text-4xl">Developer and Photographer</h1>
               <p className="font-gotham text-lg"></p>
               <p className="font-gotham text-lg">I love chasing the aesthetic, whether through taking pictures, building outfits, or design.</p>
